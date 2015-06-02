@@ -4,7 +4,7 @@ This is a simple blog built with Laravel 5. It has an admin panel to peform CRUD
 
 ##Screenshots
 ###Admin Panel
-![](screenshots/admin-screenshot.png?raw=true "Admin-Panel")
+![](screenshots/admin-panel.png?raw=true "Admin-Panel")
 
 ###Blog Home
 ![](screenshots/blog-home.png?raw=true "Blog-Home")
