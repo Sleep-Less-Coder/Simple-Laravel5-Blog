@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration {
 			$table->string('slug', 400);
 			$table->enum('draft', array(0,1))->default(0);
 			$table->text('body');
+			$table->string('image', 255);
 			$table->timestamps();
 		});
 

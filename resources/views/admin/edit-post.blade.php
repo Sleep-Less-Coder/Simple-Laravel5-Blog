@@ -15,6 +15,14 @@
 			        {{ $errors->first('title') }}
 			    @endif
 			</div>
+			<div class="form-group {{ $errors->has('image') ? 'has-error' : ''}}">
+			    <label for="image">Image</label>
+			    <input type="text" class="form-control" name="image" id="image" value="{{ $post->image }}">
+				<img src="{{ $post->image }}">
+			    @if ($errors->has('image'))
+			        {{ $errors->first('image') }}
+			    @endif
+			</div>
 
 			<div class="form-group {{ $errors->has('body') ? 'has-error' : ''}}">
 			    <label for="body">Post Body</label>

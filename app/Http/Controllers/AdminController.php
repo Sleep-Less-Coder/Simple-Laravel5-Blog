@@ -72,6 +72,7 @@ class AdminController extends Controller {
 	{
 		$validator = Validator::make(Input::all(), array(
 			'title' => 'required|min:3|max:255',
+			'image' => 'required',
 			'body' => 'required|min:10|max:65000',
 			'draft' => 'required'
 		));
@@ -84,6 +85,7 @@ class AdminController extends Controller {
 		{
 			$post = new Post;
 			$post->title = Input::get('title');
+			$post->image = Input::get('image');
 			$post->body = Input::get('body');
 			$post->draft = Input::get('draft');
 			$post->slug = $this->getSlug($post->title, $post);
@@ -145,6 +147,7 @@ class AdminController extends Controller {
 	{
 		$validator = Validator::make(Input::all(), array(
 			'title' => 'required|min:3|max:255',
+			'image' => 'required',
 			'body' => 'required|min:10|max:65000',
 			'draft' => 'required'
 		));
@@ -163,6 +166,7 @@ class AdminController extends Controller {
 		else
 		{
 			$post->title =  Input::get('title');
+			$post->image = Input::get('image');
 			$post->body = Input::get('body');
 			$post->draft = Input::get('draft');
 			$post->slug = Str::slug($post->title);
